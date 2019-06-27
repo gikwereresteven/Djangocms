@@ -1,0 +1,180 @@
+{% load cms_tags menu_tags sekizai_tags %}
+ <!DOCTYPE html>
+<html lang="{{LANGUAGE_CODE}}">
+<head>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+<meta name="author" content=""> 
+   <title>DjangoCmsCode</title>
+  
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        
+        <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   {% render_block "css" %}
+    <head>
+        <title>{% block title %}This is my new project home page{% endblock title %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style type="text/css">
+            
+            .ul {
+        
+                list-style-type: none;
+                margin: 5px;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+                margin-left: 50px;
+                width: 80px;
+                
+
+                }
+            .nav li {
+                display:block;
+                list-style-type: none;
+                padding-right: 20px;
+                text-decoration-line: none;
+                color: white;
+               
+               
+            }
+            .nav-item a {
+                color:green;
+            }
+             .nav li a {
+                display: block;
+                color:white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                width: 80px;
+                 margin-left: 20px;
+            }
+             ul li a:hover {
+                 background-color: rgba(172, 151, 151, 0.856);
+                 width: 80px;
+            }
+            
+            .loremcontainer{
+                width: 100%;
+                height: 30%;
+                background-color: cadetblue;
+                color: black;
+            }
+            .hello{
+                width: 100%;
+                background-color:crimson;
+            }
+            .arcword{
+                padding: 70px;
+            }
+            .content {
+                float: left;
+                width: 80%;
+            }
+            .sidebar {
+                float: left;
+                width: 20%;
+            }
+            .btn-dark{
+                color: white;
+                text-decoration: none;
+                background-color: #333;
+            }
+            .buttongetstarted{
+                margin-left: 750px;
+                color: white;
+                text-decoration: none;
+                background-color: #333;
+               height: 150px;
+               width: 170px;
+               margin-top: -30px;
+            }
+            .startpage{
+                color: white;
+            }
+            .alertsecond{
+                width: 100%;
+            }
+            .alert-arrow-down {
+                width: 100%;
+            }
+           .quotes{
+                width: 100%;
+                background-color: #333;
+                color: white;
+                height: 200px;
+            } 
+            .nav-link{
+                color: #333;
+            }
+             .fa-facebook{
+                 padding: 5px;   
+                 left:45%;
+                text-align: center; 
+                         
+            }
+            .fa-instagram{
+               
+                left:45%;
+                text-align: center; 
+            }
+            .third-style{
+                width: 100%;
+                margin-left: 0px;
+            }
+            style-icon{
+                line-height: 100px;
+                vertical-align: middle
+            }
+       
+        .rowsize{
+            margin: 0px;
+            padding: 50px;
+            margin-top: -20px;
+            width: 100%;
+        }
+        .iconsheep{
+            margin-left: 70px;
+        }
+        alert-icon{
+            margin-top: -9px;
+        }
+        </style>
+        {% render_block "css" %}
+    </head>
+    <body>
+        {% cms_toolbar %} 
+         
+        <div class="container-fluid">
+                {% load menu_tags %}
+                <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-danger fixed-top">
+                        <div class="container">
+                          <a class="navbar-brand" href="/en">Djangocms</a>
+                          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarResponsive">
+                              
+                            <ul class="navbar-nav ml-auto">
+                {% show_menu 0 100 100 100 "menu.html"%}
+            </ul>
+        </div>
+      </div>
+    </nav> 
+            
+        </div>
+        {% block content %}
+        {% endblock content %}
+        <footer>
+        {% placeholder 'footer' %}
+        </footer>
+        {% render_block "js" %}
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        {% render_block "js" %}
+    </body>
+</html>
